@@ -11,9 +11,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "API", "API", "{804387A1-DD3
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Gateway", "Gateway", "{50588F6E-F8E8-4452-A8B6-40D345CB7CD0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MsBanking.Core", "src\API\MsBanking.Core\MsBanking.Core.csproj", "{D1548289-F27F-40F0-B311-39486C3220FB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MsBanking.Core", "src\API\MsBanking.Core\MsBanking.Core.csproj", "{D1548289-F27F-40F0-B311-39486C3220FB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MsBanking.Common", "src\MsBanking.Common\MsBanking.Common.csproj", "{7B11BB24-C4EB-46BB-A3CC-0412DB5E54F6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MsBanking.Common", "src\MsBanking.Common\MsBanking.Common.csproj", "{7B11BB24-C4EB-46BB-A3CC-0412DB5E54F6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MsBanking.Gateway", "src\Gateway\MsBanking.Gateway\MsBanking.Gateway.csproj", "{E39C927B-8096-4F4B-918A-CD270BA60DA5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,6 +31,10 @@ Global
 		{7B11BB24-C4EB-46BB-A3CC-0412DB5E54F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7B11BB24-C4EB-46BB-A3CC-0412DB5E54F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7B11BB24-C4EB-46BB-A3CC-0412DB5E54F6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E39C927B-8096-4F4B-918A-CD270BA60DA5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E39C927B-8096-4F4B-918A-CD270BA60DA5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E39C927B-8096-4F4B-918A-CD270BA60DA5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E39C927B-8096-4F4B-918A-CD270BA60DA5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -38,6 +44,7 @@ Global
 		{50588F6E-F8E8-4452-A8B6-40D345CB7CD0} = {7AE8BDDA-9324-4EA6-9180-DACF62DB6145}
 		{D1548289-F27F-40F0-B311-39486C3220FB} = {804387A1-DD3D-4129-AFD8-26F2F01F493D}
 		{7B11BB24-C4EB-46BB-A3CC-0412DB5E54F6} = {7AE8BDDA-9324-4EA6-9180-DACF62DB6145}
+		{E39C927B-8096-4F4B-918A-CD270BA60DA5} = {50588F6E-F8E8-4452-A8B6-40D345CB7CD0}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {39C028CC-8CC7-4169-9949-95955CDC63C3}
