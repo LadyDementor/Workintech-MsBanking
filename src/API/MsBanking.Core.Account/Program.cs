@@ -1,4 +1,11 @@
 
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Options;
+using MsBanking.Common.Dto;
+using MsBanking.Core.Account.Apis;
+using MsBanking.Core.Account.DomainAccount;
+using MsBanking.Core.Account.Services;
+
 namespace MsBanking.Core.Account
 {
     public class Program
@@ -14,6 +21,15 @@ namespace MsBanking.Core.Account
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
 
+            builder.Services.AddDbContext<AccountDbContext>(options =>
+            {
+                options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
+            });
+
+            builder.Services.AddScoped<IAccountService, AccountService>();
+            builder.Services.AddAutoMapper(typeof(AccountDtoProfile));
+
+
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
@@ -23,11 +39,17 @@ namespace MsBanking.Core.Account
                 app.UseSwaggerUI();
             }
 
+            app.MapGroup("/api/v1/")
+                .WithTags("Core Banking Api v1")
+                .MapAccountApi();
+           
+
             app.UseHttpsRedirection();
 
             app.UseAuthorization();
 
-           
+            DataSeeder.Seed(app);
+
             app.Run();
         }
     }

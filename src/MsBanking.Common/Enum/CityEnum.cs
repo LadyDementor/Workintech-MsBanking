@@ -4,9 +4,9 @@
     {
         Istanbul = 34,
 
-        Ankara = 35,
+        Izmir = 35,
 
-        Izmir = 06,
+        Ankara = 6,
 
 
     }
